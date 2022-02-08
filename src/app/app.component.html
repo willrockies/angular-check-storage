@@ -1,0 +1,18 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<div *ngFor="let city of cityList; let i = index">
+  <label>
+    {{city.name}}
+    <input type="checkbox"
+      [(ngModel)]="city.checked" 
+      (ngModelChange)="saveCities()">
+  </label>  
+</div>
+
+<h3>In local storage:</h3>
+<pre>
+  {{stored | json}}
+</pre>
